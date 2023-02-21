@@ -1,23 +1,12 @@
-const events = require("events");
+import express from 'express';
 
-let emitter = new events.EventEmitter();
+const app = express();
+const PORT = 3000;
 
-emitter.on("customEvent", (message, user) => {
-    console.log(`${user}: ${message}`);
+app.get('/', (req, res) => {
+    res.send(`Node and express server is running on port ${PORT} asfsaf`)
 })
 
-emitter.emit("customEvent", "Hello World", "Computer")
-emitter.emit("customEvent", "That's cool", "Jesse")
-
-process.stdin.on("data", (data) => {
-    const input = data.toString().trim();
-    if (input === "exit") {
-        emitter.emit("customEvent", "Goodbye!", "process");
-        process.exit();
-    }
-    emitter.emit(
-        "customEvent", 
-        data.toString().trim(), 
-        "terminal"
-    )
+app.listen(PORT, () => {
+    console.log(`Your server is running on port ${PORT}`)
 })

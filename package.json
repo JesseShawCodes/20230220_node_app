@@ -1,0 +1,27 @@
+{
+  "name": "20230220_npm",
+  "version": "1.0.0",
+  "description": "Test project",
+  "main": "app.js",
+  "type": "module",
+  "directories": {
+    "lib": "lib"
+  },
+  "dependencies": {
+    "express": "^4.18.2",
+    "node": "^19.6.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/JesseShawCodes/20230220_node_app.git"
+  },
+  "author": "Jesse Shaw",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/JesseShawCodes/20230220_node_app/issues"
+  },
+  "homepage": "https://github.com/JesseShawCodes/20230220_node_app#readme"
+}
